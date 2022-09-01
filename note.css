@@ -1,0 +1,162 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    background-color: rgb(241, 241, 241);
+    font-family: "Baloo Bhai 2", cursive;
+  }
+  #navBar {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(15, 15, 15);
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #heading {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #heading h2 {
+    color: white;
+    font-family: "Baloo Bhai 2", cursive;
+  }
+  #heading ul {
+    list-style: none;
+  }
+  #heading li a {
+    text-decoration: none;
+    font-family: "Baloo Bhai 2", cursive;
+    color: white;
+  }
+  #heading li a:hover {
+    color: gray;
+    border-bottom: 1px solid gray;
+    transition: all 200ms;
+  }
+  #srchBox {
+    outline: none;
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px solid grey;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #srchBtn {
+    padding: 2.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+  #srchBtn:hover {
+    background-color: rgb(218, 210, 210);
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    width: 700px;
+    box-sizing: border-box;
+    /* justify-content: center;
+    align-items: center; */
+  }
+  #typeArea {
+    width: 100%;
+    border: 1px solid gray;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    border-radius: 5px;
+  }
+  .title h2 {
+    font-family: "Baloo Bhai 2", cursive;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  #textBox {
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai 2", cursive;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px;
+  }
+  #AddBtn {
+    padding: 4px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-family: "Baloo Bhai 2", cursive;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: all 300ms;
+  }
+  #AddBtn:hover {
+    background-color: rgb(252, 252, 252);
+    border: 1px solid black;
+    color: black;
+  }
+  .savedNotes {
+    /* border: 1px solid black; */
+    max-width: 700px;
+    /* height: 300px; */
+    box-sizing: border-box;
+    margin: 8px 4px;
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 1px auto;
+  }
+  .savedNotes h2 {
+    font-family: "Baloo Bhai 2", cursive;
+  }
+  #noteBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* height: 200px; */
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .notes {
+    box-shadow: 0px 0px 6px 1px;
+    width: 40%;
+    border: 1px solid gray;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .notes h5 {
+    font-family: "Baloo Bhai 2", cursive;
+    font-size: 16px;
+  }
+  .notes p {
+    padding: 4px;
+    font-family: "Baloo Bhai 2", cursive;
+    text-align: center;
+    font-weight: bold;
+    overflow: auto;
+  }
+  .notes button {
+    padding: 5px;
+    background-color: rgb(248, 239, 239);
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    transition: all 300ms;
+  }
+  .notes button:hover {
+    background-color: rgb(10, 10, 10);
+    color: white;
+  }

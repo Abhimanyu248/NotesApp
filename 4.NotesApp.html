@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaveNotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="note.css">
+  </head>
+  <body>
+    <nav id="navBar">
+      <div id="heading">
+        <h2>SaveNotes</h2>
+        <ul>
+          <li><a href="4.NotesApp.html"> Home </a></li>
+        </ul>
+      </div>
+      <div id="searchBox">
+        <input type="search" name="srchbar" id="srchBox" placeholder="Search" />
+        <button type="submit" id="srchBtn">Search</button>
+      </div>
+    </nav>
+    <div class="title">
+      <h2>Welcome to SaveNotes</h2>
+    </div>
+    <div class="center">
+      <div id="typeArea">
+        <textarea
+          name="text"
+          id="textBox"
+          rows="5"
+          placeholder="Type your note . . . ."
+        ></textarea>
+        <div>
+          <button type="submit" id="AddBtn">Add Note</button>
+        </div>
+      </div>
+    </div>
+    <div class="savedNotes">
+      <hr />
+      <h2>Your Notes</h2>
+      <hr />
+      <div id="noteBox"></div>
+    </div>
+    <script src="note.js"></script>
+  </body>
+</html>
