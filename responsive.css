@@ -1,0 +1,8 @@
+#navBar{
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+}
+.center{
+    margin: 1px 5px;
+}
