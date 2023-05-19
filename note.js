@@ -25,7 +25,7 @@ shownotes();
       noteObj.forEach(function (element, index) {
         html += `<div class="notes">
           <h5>Note ${index + 1}</h5>
-          <p>${element}</p>
+          <p contentEditable="true">${element}</p>
           <button type="submit" id="${index}" onclick="deleteNote(this.id)">Delete Note</button>
         </div>`;
       });
