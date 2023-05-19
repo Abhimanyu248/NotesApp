@@ -25,7 +25,7 @@ shownotes();
       noteObj.forEach(function (element, index) {
         html += `<div class="notes">
           <h5>Note ${index + 1}</h5>
-          <p>${element}</p>
+          <p contentEditable="true" id="e${index}" onblur="update(${index})">${element}</p>
           <button type="submit" id="${index}" onclick="deleteNote(this.id)">Delete Note</button>
         </div>`;
       });
@@ -62,3 +62,16 @@ shownotes();
         }
       });
     });
+    function update(index)
+    {
+      let p = document.getElementById("e"+index).innerText;
+      let notes = localStorage.getItem("notes");
+      if (notes == null) {
+        noteObj = [];
+      } else {
+        noteObj = JSON.parse(notes);
+      }
+      noteObj[index]=p;
+      localStorage.setItem("notes", JSON.stringify(noteObj));
+      shownotes();
+    }
