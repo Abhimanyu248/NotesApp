@@ -152,6 +152,7 @@
     background-color: rgb(248, 239, 239);
     color: black;
     border-radius: 4px;
+    margin-top: 12px;
     cursor: pointer;
     border: 1px solid rgb(0, 0, 0);
     transition: all 300ms;
