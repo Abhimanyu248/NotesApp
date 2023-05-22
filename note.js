@@ -3,6 +3,12 @@ shownotes();
     AddBtn.addEventListener("click", function (e) {
       let text = document.getElementById("textBox");
       let notes = localStorage.getItem("notes");
+      if(text.value=="")
+      {
+        alert("Write Someting!!!");
+      }
+      else
+      {
       if (notes == null) {
         noteObj = [];
       } else {
@@ -12,6 +18,7 @@ shownotes();
       localStorage.setItem("notes", JSON.stringify(noteObj));
       text.value = "";
       shownotes();
+    }
     });
 
     function shownotes() {
@@ -25,7 +32,7 @@ shownotes();
       noteObj.forEach(function (element, index) {
         html += `<div class="notes">
           <h5>Note ${index + 1}</h5>
-          <p contentEditable="true" id="e${index}" onblur="update(${index})">${element}</p>
+          <p contentEditable="true" id="e${index}" onclick="update(${index})">${element}</p>
           <button type="submit" id="${index}" onclick="deleteNote(this.id)">Delete Note</button>
         </div>`;
       });
@@ -64,14 +71,8 @@ shownotes();
     });
     function update(index)
     {
-      let p = document.getElementById("e"+index).innerText;
-      let notes = localStorage.getItem("notes");
-      if (notes == null) {
-        noteObj = [];
-      } else {
-        noteObj = JSON.parse(notes);
-      }
-      noteObj[index]=p;
-      localStorage.setItem("notes", JSON.stringify(noteObj));
-      shownotes();
+      let text = document.getElementById("textBox");
+      let p = document.getElementById("e"+index);
+      text.value=p.innerText;
+      deleteNote(index);
     }
